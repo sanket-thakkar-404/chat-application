@@ -172,7 +172,7 @@ io.on("connection", (socket) => {
 });
 
 app.use("*name", (req, res) => {
-  res.sendFile(path(__dirname, "../public/index.html"))
+  res.sendFile(path.join(__dirname, "public/index.html"))
 })
 
 server.listen(PORT, () => console.log(`Circle server running on http://localhost:${PORT}`));
