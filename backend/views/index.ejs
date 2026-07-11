@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Chat</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-gray-900 text-white">
+    <div class="h-screen flex justify-center items-center">
+      <div class="w-96 bg-gray-800 p-5 rounded-lg">
+        <h1 class="text-2xl mb-4">Socket Chat</h1>
+
+        <div
+          id="messages"
+          class="h-80 bg-gray-500 rounded p-3 overflow-y-auto mb-4"
+        ></div>
+
+        <div class="flex gap-2">
+          <input
+            id="message"
+            class="flex-1 text-white p-2 rounded"
+            placeholder="Enter message"
+          />
+
+          <button onclick="sendMessage()" class="bg-green-500 px-4 rounded">
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="/javascript/script.js"></script>
+  </body>
+</html>
